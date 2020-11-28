@@ -6,7 +6,9 @@ This project utilizes the `pydicom` and `fastcore` libraries. It borrows ideas (
 
 ## Install
 
-`pip install dicomtools`
+1. `git clone` the repository
+2. `cd` into the repo
+3. `pip install -e .`
 
 ## How to use
 
@@ -111,7 +113,7 @@ Import a select subset of DICOM metadata into a `pandas.DataFrame`. The subset i
 
 ```python
 df = pd.DataFrame.from_dicoms([fn]).drop('fname', axis=1)
-df
+df.T
 ```
 
 

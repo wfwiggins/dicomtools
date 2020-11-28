@@ -1,6 +1,9 @@
 {
   "dicomtools": {
     "Overview": "/",
-    "core": "core.html"
+    "core": "core.html",
+    "preproc": "preproc.html",
+    "series.train": "series.train.html",
+    "series.predict": "series.predict.html"
   }
 }
