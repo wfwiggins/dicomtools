@@ -32,8 +32,9 @@ nb_path: "index.ipynb"
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This project utilizes the <code>pydicom</code> and <code>fastcore</code> libraries. It borrows ideas (and some code) from the <code>fastai.medical.imaging</code> library (<a href="https://github.com/fastai/fastai/blob/master/fastai/medical/imaging.py">source</a>).</p>
-<p>The metadata preprocessing and series selection algorithm are recreated from the paper by Gauriau et al. {% fn 1 %}, in which a Random Forest classifier is trained to predict the sequence type (e.g. T1, T2, FLAIR, ...) of series of images from brain MRI. Such a tool may be used to select the appropriate series of images for input into a machine learning pipeline.</p>
-<p>{{ 'Gauriau R, et al. Using DICOM Metadata for Radiological Image Series Categorization: a Feasibility Study on Large Clinical Brain MRI Datasets. <em>Journal of Digital Imaging</em>. 2020 Jan; 33:747–762. (<a href="https://link.springer.com/article/10.1007/s10278-019-00308-x">link to paper</a>)' | fndetail: 1 }}</p>
+<p>The metadata preprocessing and series selection algorithm are recreated from the paper by Gauriau et al. (<em>reference below</em>), in which a Random Forest classifier is trained to predict the sequence type (e.g. T1, T2, FLAIR, ...) of series of images from brain MRI. Such a tool may be used to select the appropriate series of images for input into a machine learning pipeline.</p>
+<blockquote><p><em>Reference:</em> Gauriau R, et al. Using DICOM Metadata for Radiological Image Series Categorization: a Feasibility Study on Large Clinical Brain MRI Datasets. <em>Journal of Digital Imaging</em>. 2020 Jan; 33:747–762. (<a href="https://link.springer.com/article/10.1007/s10278-019-00308-x">link to paper</a>)</p>
+</blockquote>
 
 </div>
 </div>
