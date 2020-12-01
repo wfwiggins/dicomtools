@@ -2,28 +2,34 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"Path.dcmread": "00_core.ipynb",
+index = {"get_dicoms": "00_core.ipynb",
+         "Path.dcmread": "00_core.ipynb",
          "DcmDataset.as_dict": "00_core.ipynb",
          "pd.DataFrame.from_dicoms": "00_core.ipynb",
-         "exclude_other": "01_preproc.ipynb",
-         "get_series_fp": "01_preproc.ipynb",
-         "compute_plane": "01_preproc.ipynb",
-         "detect_contrast": "01_preproc.ipynb",
-         "rm_extra_info": "01_preproc.ipynb",
-         "extract_labels": "01_preproc.ipynb",
-         "make_binary_cols": "01_preproc.ipynb",
-         "rescale_cols": "01_preproc.ipynb",
-         "get_dummies": "01_preproc.ipynb",
-         "preprocess": "01_preproc.ipynb",
+         "exclude_other": "01_series.preproc.ipynb",
+         "get_series_fp": "01_series.preproc.ipynb",
+         "compute_plane": "01_series.preproc.ipynb",
+         "detect_contrast": "01_series.preproc.ipynb",
+         "rm_extra_info": "01_series.preproc.ipynb",
+         "extract_labels": "01_series.preproc.ipynb",
+         "make_binary_cols": "01_series.preproc.ipynb",
+         "rescale_cols": "01_series.preproc.ipynb",
+         "get_dummies": "01_series.preproc.ipynb",
+         "preprocess": "01_series.preproc.ipynb",
          "train_setup": "02_series.train.ipynb",
          "train_fit": "02_series.train.ipynb",
          "path": "03_series.predict.ipynb",
-         "predict_from_df": "03_series.predict.ipynb"}
+         "predict_from_df": "03_series.predict.ipynb",
+         "predict_from_folder": "03_series.predict.ipynb",
+         "model_path": "04_series.find.ipynb",
+         "Finder": "04_series.find.ipynb"}
 
 modules = ["core.py",
            "preproc.py",
+           "series/preproc.py",
            "series/train.py",
-           "series/predict.py"]
+           "series/predict.py",
+           "series/find.py"]
 
 doc_url = "https://wfwiggins.github.io/dicomtools/"
 

@@ -4,11 +4,9 @@ __all__ = ['train_setup', 'train_fit']
 
 # Cell
 from ..basics import *
+from sklearn.ensemble import RandomForestClassifier
 
 np.random.seed(42)
-
-from sklearn.ensemble import RandomForestClassifier
-from joblib import dump
 
 # Cell
 def train_setup(df):

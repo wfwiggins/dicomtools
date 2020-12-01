@@ -3,7 +3,9 @@
     "Overview": "/",
     "core": "core.html",
     "preproc": "preproc.html",
+    "series.preproc": "series.preproc.html",
     "series.train": "series.train.html",
-    "series.predict": "series.predict.html"
+    "series.predict": "series.predict.html",
+    "series.find": "series.find.html"
   }
 }

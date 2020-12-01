@@ -20,8 +20,8 @@ Read a DICOM file:
 ```python
 from pydicom.data import get_testdata_file
 
-fn = Path(get_testdata_file("MR_small.dcm"))
-ds = fn.dcmread(fn)
+path = Path(get_testdata_file("MR_truncated.dcm"))
+ds = path.dcmread()
 ds.file_meta
 ```
 
@@ -42,7 +42,7 @@ ds.file_meta
 Import a select subset of DICOM metadata into a `pandas.DataFrame`. The subset is defined in `dicomtools.core` and is based on the metadata used for the series selection algorithm in the paper referenced above.
 
 ```python
-df = pd.DataFrame.from_dicoms([fn]).drop('fname', axis=1)
+df = pd.DataFrame.from_dicoms([path]).drop('fname', axis=1)
 df.T
 ```
 
@@ -78,6 +78,10 @@ df.T
     <tr>
       <th>SOPClassUID</th>
       <td>MR Image Storage</td>
+    </tr>
+    <tr>
+      <th>PatientID</th>
+      <td>4MR1</td>
     </tr>
     <tr>
       <th>ContrastBolusAgent</th>
@@ -116,6 +120,30 @@ df.T
       <td>None</td>
     </tr>
     <tr>
+      <th>StudyInstanceUID</th>
+      <td>1.3.6.1.4.1.5962.1.2.4.20040826185059.5457</td>
+    </tr>
+    <tr>
+      <th>SeriesInstanceUID</th>
+      <td>1.3.6.1.4.1.5962.1.3.4.1.20040826185059.5457</td>
+    </tr>
+    <tr>
+      <th>StudyID</th>
+      <td>4MR1</td>
+    </tr>
+    <tr>
+      <th>SeriesNumber</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>AcquisitionNumber</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>InstanceNumber</th>
+      <td>1</td>
+    </tr>
+    <tr>
       <th>ImageOrientationPatient</th>
       <td>[1.0000, 0.0000, 0.0000, 0.0000, 1.0000, 0.0000]</td>
     </tr>
@@ -131,4 +159,28 @@ df.T
 </table>
 </div>
 
+
+
+
+<h2 id="Finder" class="doc_header"><code>class</code> <code>Finder</code><a href="https://github.com/wfwiggins/dicomtools/tree/master/dicomtools/series/find.py#L65" class="source_link" style="float:right">[source]</a></h2>
+
+> <code>Finder</code>(**`path`**)
+
+A class for finding DICOM files of a specified sequence type from a specific .
+
+
+
+<h4 id="Finder.predict" class="doc_header"><code>Finder.predict</code><a href="https://github.com/wfwiggins/dicomtools/tree/master/dicomtools/series/find.py#L74" class="source_link" style="float:right">[source]</a></h4>
+
+> <code>Finder.predict</code>()
+
+Obtains predictions from the model specified in `model_path`
+
+
+
+<h4 id="Finder.find" class="doc_header"><code>Finder.find</code><a href="https://github.com/wfwiggins/dicomtools/tree/master/dicomtools/series/find.py#L86" class="source_link" style="float:right">[source]</a></h4>
+
+> <code>Finder.find</code>(**`plane`**=*`'ax'`*, **`seq`**=*`'t1'`*, **`contrast`**=*`True`*, **`thresh`**=*`0.8`*, **\*\*`kwargs`**)
+
+Returns a `pandas.DataFrame` with predicted sequences matching the query at the specified threshold
 

@@ -16,11 +16,17 @@ entries:
       title: preproc
       url: preproc.html
     - output: web,pdf
+      title: series.preproc
+      url: series.preproc.html
+    - output: web,pdf
       title: series.train
       url: series.train.html
     - output: web,pdf
       title: series.predict
       url: series.predict.html
+    - output: web,pdf
+      title: series.find
+      url: series.find.html
     output: web
     title: dicomtools
   output: web
