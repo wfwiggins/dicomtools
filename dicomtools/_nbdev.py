@@ -25,7 +25,6 @@ index = {"get_dicoms": "00_core.ipynb",
          "Finder": "04_series.find.ipynb"}
 
 modules = ["core.py",
-           "preproc.py",
            "series/preproc.py",
            "series/train.py",
            "series/predict.py",

@@ -13,9 +13,6 @@ entries:
       title: core
       url: core.html
     - output: web,pdf
-      title: preproc
-      url: preproc.html
-    - output: web,pdf
       title: series.preproc
       url: series.preproc.html
     - output: web,pdf
